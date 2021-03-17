@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %} - Do you know this region?{% endblock %}
+
+{% block content %}
+<div class="container-narrow text-center p-4">
+  <h4>Do you know the region <b>{{ region.name }}</b>?</h4>
+      <img id="left-image" src= {{ url_for('static', filename = 'maps/region_' + region.id|string + '.png') }} class="img-responsive pt-2" style="width:600px; height:600px;">  
+      <div class="p-2">
+        <a href="{{ url_for('.known_regions_selection') }}" style="width:200px;" class="btn btn-danger btn-lg">No</a>
+        <a href="{{ url_for('.store_known_region', rid=region.id) }}" style="width:200px;" class="btn btn-success btn-lg">Yes</a>
+      </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}
