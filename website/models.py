@@ -36,7 +36,7 @@ class User(db.Model):
 
 
 class Ranking(db.Model):
-    __tablename__ = 'rankings'
+    __tablename__ = 'comparisons'
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
@@ -45,7 +45,7 @@ class Ranking(db.Model):
         db.Integer, db.ForeignKey('regions.id'), nullable=False)
     richest = db.Column(
         db.Integer, db.ForeignKey('regions.id'), nullable=False)
-    reranked = db.Column(db.Boolean, default=False)
+    rejudged = db.Column(db.Boolean, default=False)
 
     user = db.relationship('User', backref=db.backref('rankings', lazy=True))
 

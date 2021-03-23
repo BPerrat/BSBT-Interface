@@ -1,9 +1,9 @@
 class DevConfig(object):
     SECRET_KEY = 'your_secret_key'
     CONFIG_TYPE = 'Development'
-    WEBSITE_TITLE = 'Comparative Judgements'
+    WEBSITE_TITLE = 'BSBT-Interface'
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI='sqlite:///../data/test_final.db'
+    SQLALCHEMY_DATABASE_URI='sqlite:///../comparative_judgements.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 

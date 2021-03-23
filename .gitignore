@@ -1,0 +1,4 @@
+__pycache__/
+website/__pycache__/
+data/
+website/static/maps/*

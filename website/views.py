@@ -75,7 +75,7 @@ def previous_ranking():
     r = Ranking.query.filter_by(user_id=session['user_id']).order_by(
         Ranking.date.desc()).first()
 
-    r.reranked = True
+    r.rejudged = True
 
     db.session.add(r)
     db.session.commit()
