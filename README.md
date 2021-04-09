@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 # Preparing the Data
 
-This is the only setup step required to define the regions of interest. The script `prepare_website.py` streamline the process and can be called as follow:
+This is the only setup step required to define the regions of interest. The script `prepare_website.py` streamlines the process and can be called as follow:
 ```bash
 python3 prepare_website.py <your_shapefile.shp>
 ```
